@@ -1,0 +1,93 @@
+﻿@model TablePageModel
+
+<table class="table table-sm  simple-table mt-2">
+    <thead>
+        <tr class=" ">
+            <th><span class="pull-right">по состоянию на @Model.Updated.ToShortTimeString()</span></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var federalDistrict in Model.FederalDistricts)
+        {
+            <tr>
+                <td>
+                    @federalDistrict.ID @federalDistrict.Name
+                </td>
+                <td>
+                    <span class="text-warning">план</span>
+                </td>
+                <td>
+                    <span class="text-warning">факт</span>
+                </td>
+                <td>
+                    <span class="text-warning">план</span>
+                </td>
+                <td>
+                    <span class="text-warning">факт</span>
+                </td>
+                <td>
+                    <span class="text-warning">план</span>
+                </td>
+                <td>
+                    <span class="text-warning">факт</span>
+                </td>
+                <td>
+                    <span class="text-warning">план</span>
+                </td>
+                <td>
+                    <span class="text-warning">факт</span>
+                </td>
+                <td>
+                    <button data-visibility="0" data-id="@federalDistrict.ID" type="button"
+                            class="btn btn-sm  p-0  text-white displayChildRows">
+                        <i class="fa fa-arrow-right small"></i>
+                    </button>
+                </td>
+            </tr>
+
+            @foreach (var federalSubject in federalDistrict.FederalSubjects)
+            {
+                <tr class="d-none simple-table-childrow childrow-@federalDistrict.ID">
+                    <td class="pl-4">
+                        @federalSubject.Name
+                    </td>
+                    <td>
+                        <span class="text-warning">1</span>
+                    </td>
+                    <td>
+                        <span class="text-warning">2</span>
+                    </td>
+                    <td>
+                        <span class="text-warning">3</span>
+                    </td>
+                    <td>
+                        <span class="text-warning">4</span>
+                    </td>
+                    <td>
+                        <span class="text-warning">5</span>
+                    </td>
+                    <td>
+                        <span class="text-warning">6</span>
+                    </td>
+                    <td>
+                        <span class="text-warning">7</span>
+                    </td>
+                    <td>
+                        <span class="text-warning">8</span>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

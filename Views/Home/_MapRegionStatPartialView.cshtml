@@ -1,0 +1,124 @@
+﻿@model FederalSubjectHeaderStat
+
+<h6 class="text-center">@Model.FederalSubjectName</h6>
+<hr class="bg-white m-1" />
+<div class="row">
+    <div class="col-3 pl-1 pr-1">
+        <p class="mb-0 text-center"><u>@Model.ObjectTotal</u></p>
+        <p class="mb-0 text-center">объектов</p>
+    </div>
+    <div class="col-4 border-left pl-1 pr-1">
+        <p class="mb-0"><u>@Model.ObjectsInProcess</u> в процессе</p>
+        <hr class="bg-white m-1" />
+        <p class="mb-0"><u>@Model.ObjectsDone</u> завершено</p>
+    </div>
+    <div class="col-5 border-left pl-1 pr-1">
+        <p class="mb-0"><u>@Model.ProjectsTotal</u></p>
+        <p class="mb-0">федеральных проектов</p>
+    </div>
+</div>
+<hr class="bg-white m-1" />
+<div class="row" style="height:10vh!important;">
+    <div class="col-12">
+        <div id="carouselExampleControls" class="carousel" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="text-center mb-0">Бюджет</p>
+                            <p class="text-center mb-0">@Model.BudjetStatItem.Value1</p>
+                            <p class="text-center mb-0">в млрд. руб.</p>
+                        </div>
+                        <div class="col-6 border-left">
+                            <p class="mb-0 text-center">Кассовое исполнение</p>
+                            <p class="mb-0 text-center">@Model.BudjetStatItem.Value1</p>
+                            <p class="mb-0 text-center">в млрд. руб.</p>
+                        </div>
+                        <div class="col-3 border-left">
+                            <p class="mb-0 text-center">Исполнение</p>
+                            <p class="mb-0 text-center">@Model.BudjetStatItem.Value3</p>
+                            <p class="mb-0 text-center">в млрд. руб.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-4">
+                            <p class="text-center mb-0">План-графики</p>
+                            <p class="text-center mb-0">@Model.PlansStatItem.Value1</p>
+                            <p class="text-center mb-0">в млрд. руб.</p>
+                        </div>
+                        <div class="col-4 border-left">
+                            <p class="mb-0 text-center">Извещения</p>
+                            <p class="mb-0 text-center">@Model.PlansStatItem.Value1</p>
+                            <p class="mb-0 text-center">в млрд. руб.</p>
+                        </div>
+                        <div class="col-4 border-left">
+                            <p class="mb-0 text-center">Контракты</p>
+                            <p class="mb-0 text-center">@Model.PlansStatItem.Value3</p>
+                            <p class="mb-0 text-center">в млрд. руб.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="text-center mb-0">@Model.ControlPointStatItem.Value1</p>
+                            <p class="text-center mb-0">контрольных точек</p>
+                        </div>
+                        <div class="col-4 border-left">
+                            <p class="mb-0">@Model.ControlPointStatItem.Value2 срок не наступил</p>
+                            <hr class="bg-white m-1" />
+                            <p class="mb-0">@Model.ControlPointStatItem.Value3 в срок</p>
+                        </div>
+                        <div class="col-5 border-left">
+                            <p class="mb-0">@Model.ControlPointStatItem.Value4 срок не наступил</p>
+                            <hr class="bg-white m-1" />
+                            <p class="mb-0">@Model.ControlPointStatItem.Value5 в срок</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="text-center mb-0">@Model.VariablesStatItem.Value1</p>
+                            <p class="text-center mb-0">показателей</p>
+                        </div>
+                        <div class="col-6 border-left">
+                            <p class="mb-0">@Model.VariablesStatItem.Value2 план выполнен</p>
+                            <hr class="bg-white m-1" />
+                            <p class="mb-0">@Model.VariablesStatItem.Value3 план не выполнен</p>
+                        </div>
+                        <div class="col-3 border-left">
+                            <p class="mb-0 text-center">Исполнение</p>
+                            <p class="mb-0 text-center">@Model.VariablesStatItem.Value3</p>
+                            <p class="mb-0 text-center">%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+<hr class="bg-white m-1" />
+<div class="row">
+    <div class="col-5">
+    </div>
+    <div class="col-2">
+       
+            <a class="carousel-control-prev " href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <img class="" style=" margin: auto; display: block;"  src="~/images/chart-icon.png">
+            <a class="carousel-control-next " href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+         
+    </div>
+    <div class="col-5">
+    </div>
+</div>
